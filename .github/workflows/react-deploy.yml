@@ -9,11 +9,11 @@ on:
 
 # GitHub Actions가 AWS OIDC 인증을 위해 필요한 권한 설정
 permissions:
-  id-token: write # OIDC 토큰 발급 쓰기 권한
+  id-token: write # OIDC 토큰 발급 쓰기 권한  
   contents: read  # 저장소 코드 읽기 권한
 
 # 실행 단위 설정
-jobs:
+jobs:   
   deploy: 
     # 실행 환경 (GitHub에서 제공하는 러너)
     runs-on: ubuntu-latest
