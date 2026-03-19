@@ -5,7 +5,7 @@ import Login from "./pages/Login.jsx";
 import NoticeList from "./pages/NoticeList.jsx";
 import NoticeDetail from "./pages/NoticeDetail.jsx";
 import NoticeWrite from "./pages/NoticeWrite.jsx";
-import NoticeEdit from "./pages/noticeEdit.jsx";
+import NoticeEdit from "./pages/NoticeEdit.jsx";
 
 function App() {
 
