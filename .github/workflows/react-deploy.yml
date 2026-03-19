@@ -5,7 +5,7 @@ name: React Deploy to S3 (OIDC)
 on:
   push:
     # master 브랜치에 push가 발생하면 실행하겠다  
-    branches: ["master"]   
+    branches: ["master"]       
 
 # GitHub Actions가 AWS OIDC 인증을 위해 필요한 권한 설정
 permissions:
