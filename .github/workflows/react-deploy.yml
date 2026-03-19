@@ -34,9 +34,9 @@ jobs:
       - name: Install Dependencies
         run: npm install # package.json에 작성되어 있는 의존성 라이브러리 설치 
       
-      # 4. 리액트 프로젝트 빌드
+      # 4. 리액트 프로젝트 빌드 test test
       - name: Build React
-        run: npm run build
+        run: npm run build    
         # 결과물(Artifact) 생성 : dist/
 
       # 5. AWS 인증 (OIDC 방식)
@@ -53,9 +53,9 @@ jobs:
         run: |
           aws s3 sync dist s3://${{ secrets.S3_BUCKET_NAME }} --delete
 
-      # 7. CloudFront 캐시 무효화 ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
+      # 7. CloudFront 캐시 무효화 
       - name: Invalidate CloudFront Cache
         run:
           aws cloudfront create-invalidation \
-            --distribution-id E213Y6W8NFZXPB \
+            --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} \
             --paths "/*"
